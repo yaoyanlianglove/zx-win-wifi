@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/nav/list">
+        <file>resource/click_list.jpg</file>
+    </qresource>
+</RCC>

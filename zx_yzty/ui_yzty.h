@@ -342,7 +342,7 @@ public:
     {
         if (YZTY->objectName().isEmpty())
             YZTY->setObjectName(QStringLiteral("YZTY"));
-        YZTY->resize(1182, 780);
+        YZTY->resize(1290, 780);
         YZTY->setStyleSheet(QStringLiteral(""));
         action12 = new QAction(YZTY);
         action12->setObjectName(QStringLiteral("action12"));
@@ -1639,6 +1639,7 @@ public:
 
         tran_high_per = new QLineEdit(page_config);
         tran_high_per->setObjectName(QStringLiteral("tran_high_per"));
+        tran_high_per->setEnabled(false);
         tran_high_per->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
         gridLayout_9->addWidget(tran_high_per, 3, 1, 1, 1);
@@ -1650,6 +1651,7 @@ public:
 
         tran_low_per = new QLineEdit(page_config);
         tran_low_per->setObjectName(QStringLiteral("tran_low_per"));
+        tran_low_per->setEnabled(false);
         tran_low_per->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
 
         gridLayout_9->addWidget(tran_low_per, 4, 1, 1, 1);
@@ -2044,12 +2046,12 @@ public:
         YZTY->addToolBar(Qt::TopToolBarArea, mainToolBar);
         menuBar = new QMenuBar(YZTY);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1182, 23));
+        menuBar->setGeometry(QRect(0, 0, 1290, 23));
         YZTY->setMenuBar(menuBar);
 
         retranslateUi(YZTY);
 
-        stackedWidget_nav->setCurrentIndex(6);
+        stackedWidget_nav->setCurrentIndex(5);
         stackedWidget_rec->setCurrentIndex(1);
 
 

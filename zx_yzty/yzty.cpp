@@ -1054,10 +1054,10 @@ void YZTY::get_device_cfg_handle(int len)
     int dev_tr_delay = (readData[28] << 8) + readData[29];
     int bh_oil_tmp   = (readData[30] << 8) + readData[31];
     int tran_content = (readData[32] << 8) + readData[33];
-    int switch_total = (readData[34] << 8) + readData[35];
-    int tran_range_h = (readData[36] << 8) + readData[37];
-    int tran_range_l = (readData[38] << 8) + readData[39];
-    int dev_code     = (readData[40] << 8) + readData[41];
+    int dev_code     = (readData[34] << 8) + readData[35];
+    int switch_total = (readData[36] << 8) + readData[37];
+    int tran_range_h = (readData[38] << 8) + readData[39];
+    int tran_range_l = (readData[40] << 8) + readData[41];
     int switch_type  = (readData[42] << 8) + readData[43];
     int dev_h_v      = (readData[44] << 8) + readData[45];
     int dev_s_v      = (readData[46] << 8) + readData[47];
@@ -1077,8 +1077,8 @@ void YZTY::get_device_cfg_handle(int len)
     ui->tran_content->setText(QString::number(tran_content));
     ui->tran_switch_total->setText(QString::number(switch_total));
     ui->dev_tr_th->setText(QString::number(dev_tr_th));
-    ui->tran_high_per->setText(QString::number(tran_range_h));
-    ui->tran_low_per->setText(QString::number(tran_range_l));
+    ui->tran_high_per->setText(QString::number(tran_range_h/100));
+    ui->tran_low_per->setText(QString::number(tran_range_l/100));
     ui->dev_code->setText(QString::number(dev_code));
     ui->dev_tr_delay->setText(QString::number(dev_tr_delay));
     ui->bh_oil_tmp->setText(QString::number(bh_oil_tmp));
@@ -1151,15 +1151,9 @@ void YZTY::send_set_device_cfg()
 
     sendData[32] = ui->tran_content->text().toInt() >> 8;
     sendData[33] = ui->tran_content->text().toInt() &  0xFF;
-    sendData[34] = ui->tran_switch_total->text().toInt() >> 8;
-    sendData[35] = ui->tran_switch_total->text().toInt() &  0xFF;
-    sendData[36] = ui->tran_high_per->text().toInt() >> 8;
-    sendData[37] = ui->tran_high_per->text().toInt() &  0xFF;
-    sendData[38] = ui->tran_low_per->text().toInt() >> 8;
-    sendData[39] = ui->tran_low_per->text().toInt() &  0xFF;
 
-    sendData[40] = ui->dev_code->text().toInt() >> 8;
-    sendData[41] = ui->dev_code->text().toInt() & 0xFF;
+    sendData[34] = ui->dev_code->text().toInt() >> 8;
+    sendData[35] = ui->dev_code->text().toInt() & 0xFF;
 
     crc = CRC_16(sendData, SEND_SET_CFG_LEN - 2);
     sendData[SEND_SET_CFG_LEN - 2] = crc >> 8;

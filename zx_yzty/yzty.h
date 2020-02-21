@@ -42,7 +42,7 @@
 #define SEND_YK_LEN          9
 #define SEND_YK_EN_LEN       9
 #define SEND_GET_CFG_LEN     8
-#define SEND_SET_CFG_LEN     44
+#define SEND_SET_CFG_LEN     38
 #define SEND_GET_TY_REC_LEN  12
 #define SEND_GET_ALA_REC_LEN 12
 #define SEND_ADJUST_LEN      16

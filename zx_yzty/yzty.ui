@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1182</width>
+    <width>1290</width>
     <height>780</height>
    </rect>
   </property>
@@ -462,7 +462,7 @@ font: 10pt &quot;AcadEref&quot;</string>
          <string notr="true">background-color: rgb(199, 237, 204);</string>
         </property>
         <property name="currentIndex">
-         <number>6</number>
+         <number>5</number>
         </property>
         <widget class="QWidget" name="page_com">
          <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -1861,6 +1861,9 @@ font: 10pt &quot;AcadEref&quot;</string>
             </item>
             <item row="3" column="1">
              <widget class="QLineEdit" name="tran_high_per">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="styleSheet">
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
@@ -1875,6 +1878,9 @@ font: 10pt &quot;AcadEref&quot;</string>
             </item>
             <item row="4" column="1">
              <widget class="QLineEdit" name="tran_low_per">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="styleSheet">
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
@@ -2508,7 +2514,7 @@ font: 10pt &quot;AcadEref&quot;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1182</width>
+     <width>1290</width>
      <height>23</height>
     </rect>
    </property>

@@ -1722,6 +1722,7 @@ void YZTY::error_handle(int len)
         break;
     case 408:
         QMessageBox::warning(NULL,QString::fromLocal8Bit("错误"),QString::fromLocal8Bit("模式错误！"));
+        break;
     case 409:
         QMessageBox::warning(NULL,QString::fromLocal8Bit("错误"),QString::fromLocal8Bit("校表失败！"));
         break;

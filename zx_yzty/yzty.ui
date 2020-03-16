@@ -206,7 +206,7 @@ font: 10pt &quot;AcadEref&quot;</string>
          <string notr="true">font: 10pt &quot;AcadEref&quot;;</string>
         </property>
         <property name="text">
-         <string>记忆档位</string>
+         <string>当前档位</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -232,7 +232,7 @@ font: 10pt &quot;AcadEref&quot;</string>
       <item>
        <widget class="QLabel" name="label_46">
         <property name="text">
-         <string>当前档位</string>
+         <string>记忆档位</string>
         </property>
        </widget>
       </item>

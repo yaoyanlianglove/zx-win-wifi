@@ -2077,9 +2077,9 @@ public:
         dev_stat->setText(QString());
         label_99->setText(QApplication::translate("YZTY", "\345\275\223\345\211\215\345\256\271\351\207\217", Q_NULLPTR));
         cap_stat->setText(QString());
-        label_12->setText(QApplication::translate("YZTY", "\350\256\260\345\277\206\346\241\243\344\275\215", Q_NULLPTR));
+        label_12->setText(QApplication::translate("YZTY", "\345\275\223\345\211\215\346\241\243\344\275\215", Q_NULLPTR));
         dw_stat->setText(QString());
-        label_46->setText(QApplication::translate("YZTY", "\345\275\223\345\211\215\346\241\243\344\275\215", Q_NULLPTR));
+        label_46->setText(QApplication::translate("YZTY", "\350\256\260\345\277\206\346\241\243\344\275\215", Q_NULLPTR));
         mem_dw_stat->setText(QString());
         label_17->setText(QApplication::translate("YZTY", "\345\267\245\344\275\234\346\250\241\345\274\217", Q_NULLPTR));
         ty_mode_stat->setText(QString());

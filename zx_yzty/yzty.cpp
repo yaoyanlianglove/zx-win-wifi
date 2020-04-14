@@ -1102,11 +1102,15 @@ void YZTY::get_device_cfg_handle(int len)
     else if(switch_type == 0x13)
         ui->switch_type->setText(QString::fromLocal8Bit("步进电机调压开关17档"));
     else if(switch_type == 0x21)
-        ui->switch_type->setText(QString::fromLocal8Bit("永磁调容调压开关3档"));
-    else if(switch_type == 0x22)
         ui->switch_type->setText(QString::fromLocal8Bit("永磁调压开关5档"));
-    else if(switch_type == 0x23)
+    else if(switch_type == 0x22)
         ui->switch_type->setText(QString::fromLocal8Bit("永磁调压开关7档"));
+    else if(switch_type == 0x23)
+        ui->switch_type->setText(QString::fromLocal8Bit("永磁调容调压开关3档"));
+    else if(switch_type == 0x24)
+        ui->switch_type->setText(QString::fromLocal8Bit("永磁调容调压开关5档"));
+    else if(switch_type == 0x25)
+        ui->switch_type->setText(QString::fromLocal8Bit("永磁调容调压开关7档"));
     else
         ui->switch_type->setText(QString::number(switch_type));
 }
@@ -1446,7 +1450,7 @@ void YZTY::get_ala_rec_handle(int len)
         if((device_ago_state & 0x08) == 0x08)
             device_ago_state_buf = device_ago_state_buf + QString::fromLocal8Bit("档位故障 | ");
         if((device_ago_state & 0x10) == 0x10)
-            device_ago_state_buf = device_ago_state_buf + QString::fromLocal8Bit("电机故障 | ");
+            device_ago_state_buf = device_ago_state_buf + QString::fromLocal8Bit("开关故障 | ");
         if((device_ago_state & 0x20) == 0x20)
             device_ago_state_buf = device_ago_state_buf + QString::fromLocal8Bit("失电告警 | ");
         if((device_ago_state & 0x40) == 0x40)

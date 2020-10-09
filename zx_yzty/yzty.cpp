@@ -1095,6 +1095,10 @@ void YZTY::get_device_cfg_handle(int len)
         ui->switch_type->setText(QString::fromLocal8Bit("直流电机调压开关5档130转"));
     else if(switch_type == 0x02)
         ui->switch_type->setText(QString::fromLocal8Bit("直流电机调压开关5档220转"));
+    else if(switch_type == 0x03)
+        ui->switch_type->setText(QString::fromLocal8Bit("双直流电机调压开关9档"));
+    else if(switch_type == 0x04)
+        ui->switch_type->setText(QString::fromLocal8Bit("双直流电机调压开关17档"));
     else if(switch_type == 0x11)
         ui->switch_type->setText(QString::fromLocal8Bit("步进电机调压开关5档"));
     else if(switch_type == 0x12)
